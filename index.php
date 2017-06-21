@@ -52,33 +52,32 @@ session_start();
                     <div class="col-lg-4 col-md-6 col-sm-12" id=col-1><h2 class="text-center"><i class="fa fa-home fa-2x" aria-hidden="true"></i></h2>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12" id=col-2><h2 class="text-center"><i class="fa fa-database fa-2x" aria-hidden="true"></i>
-</h2>
+                    <div class="col-lg-4 col-md-6 col-sm-12" id=col-2>
+                      <h2 class="text-center">
+                        <i class="fa fa-database fa-2x" aria-hidden="true"></i>
+                      </h2>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?
                     </div>
                     <a href="quiz_user.php"><div class="col-lg-4 col-md-6 col-sm-12 " id=col-3> <h2 class="text-center"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i></h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?
                    </div></a>
-
-
-
                         <?php
-                        if(isset($_SESSION['password'])){
-                        ?>
-                       <div class="col-lg-4 col-md-6 col-sm-12" id="col-4"><h2 class="text-center"><i class="fa fa-user fa-2x" id="icon-4" aria-hidden="true"></i></h2><p class="text-center">
-                        <?php
+                        if(isset($_SESSION['email'])){
+
+                       echo '<div class="col-lg-4 col-md-6 col-sm-12" id="col-4"><h2 class="text-center"><i class="fa fa-user fa-2x" id="icon-4" aria-hidden="true"></i></h2><p class="text-center">';
+
                          echo "Witaj ".strtoupper($_SESSION['name']) ;
                         echo '</div> </p>';
                         }
                            else{
+
+
+                        echo '<div class="col-lg-4 col-md-6 col-sm-12" id="col-44"> <h2 class="text-center"><i class="fa fa-user fa-2x" aria-hidden="true"></i></h2><p class="text-center">Nie zalogowany</p></div>';
+
+                          }
                         ?>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12" id="col-44"> <h2 class="text-center"><i class="fa fa-user fa-2x" aria-hidden="true"></i></h2><p class="text-center">Nie zalogowany</p></div>
-                               <?php
-                           }
-                        ?>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12" id=col-5> <h2 class="text-center"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?
-                    </div>
+                    <a href="logout.php"><div class="col-lg-4 col-md-6 col-sm-12" id=col-5> <h2 class="text-center"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?
+                    </div></a>
                     <div class="col-lg-4 col-md-6 col-sm-12" id=col-6> <h2 class="text-center">
                         <i class="fa fa-envelope-open fa-2x" aria-hidden="true"></i>
                     </h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde aliquid ipsum tempora numquam qui neque quidem cum cupiditate? Dolores?

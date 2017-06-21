@@ -1,12 +1,13 @@
 <?php
 session_start();
+if(!isset($_SESSION['LoggedIN']) && $_SESSION['LoggedIN'] != true) {
 ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
-        Quiz Ajax
+        Quiz - Logowanie
     </title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -35,9 +36,8 @@ session_start();
                          <li><a href="register.php">REJESTRACJA</a></li>
                          <li><a href="quiz.php">KONTAKT</a></li>
                      </ul>
-                     </nav>
+                    </nav>
                  </div>
-
              </div>
 
   <div class="container margin-top">
@@ -50,8 +50,9 @@ session_start();
           }
           ?>
         </div>
+
         <div class="wraper">
-          <form method="post" action="check.php">
+          <form method="post" action="check_login.php">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
@@ -62,6 +63,14 @@ session_start();
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
+        </div>
+        <div class="display-error">
+            <?php
+            if(isset($_SESSION['loginFailed'])) {
+              echo $_SESSION['loginFailed'];
+              unset($_SESSION['loginFailed']);
+            }
+             ?>
         </div>
       </div>
     </div>
@@ -74,3 +83,10 @@ session_start();
    <script src="js/loader.js"></script>
 </body>
 </html>
+<?php
+}
+else{
+  header("Location:index.php");
+  exit();
+
+}

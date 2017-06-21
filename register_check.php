@@ -47,31 +47,18 @@ if(isset($_POST['email'])) {
 
 // check re_captacha
 
-  // $secret_captcha = "6LdRUyYUAAAAAOcpWtLbjkFfztHq0GlbFr7uJSXp";
-  // $check_captcha = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_captcha.'&response='.$_POST['g-recaptcha-response']);
-  // $google_response = json_decode($check_captcha);
-  //
-  // if($google_response->success == false) {
-  //   $check_OK = false;
-  //   $_SESSION['cap_error'] = "Potwierdz że nie jesteś robotem!";
-  //
-  // }
+  $secret_captcha = "6LdRUyYUAAAAAOcpWtLbjkFfztHq0GlbFr7uJSXp";
+  $check_captcha = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_captcha.'&response='.$_POST['g-recaptcha-response']);
+  $google_response = json_decode($check_captcha);
+
+  if($google_response->success == false) {
+    $check_OK = false;
+    $_SESSION['cap_error'] = "Potwierdz że nie jesteś robotem!";
+
+  }
   require_once"connect.php";
   mysqli_report(MYSQLI_REPORT_STRICT);
-  // try {
-  //     $conn = new PDO("mysql:host=$servername;dbname=$db_name", "$username", $password);
-  //     // set the PDO error mode to exception
-  //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  //     echo "Connected successfully";
-  //     $sql = "INSERT INTO users (name, last_name, email, password, pytanie_id )
-  //      VALUES ('$name','', '$email', '$pwd_hash', '1')";
-  //      $conn->exec($sql);
-  //     }
-  //   catch(PDOException $e) {
-  //
-  //       $_SESSION['er'] = "Wystąpił nieoczekiwany błąd! Spróbuj później!";
-  //       $_SESSION['dev_error'] = $e->getMessage();
-  //     }
+
   try {
 
     $conn = new mysqli($servername, $username, $password, $db_name);
@@ -118,28 +105,3 @@ if(isset($_POST['email'])) {
   }
 
 }
-
-// Create connection
-// $conn = new mysqli($servername, $username, $password, $db_name);
-// mysqli_query($conn,"SET NAMES `utf8` COLLATE `utf8_polish_ci`");
-// // Check connection
-// if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-// }
-// echo "Connected successfully";
-//
-// $name = $_POST['name'];
-// $email = $_POST['email'];
-// $password = $_POST['password'];
-//
-//
-// $sql = "INSERT INTO users (name, last_name, email, password, pytanie_id )
-// VALUES ('$name','', '$email', '$password', '1')";
-//
-// if ($conn->query($sql) === TRUE) {
-//     echo "New record created successfully";
-// } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
-//
-// $conn->close();
