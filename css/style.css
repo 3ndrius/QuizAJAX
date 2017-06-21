@@ -1,0 +1,80 @@
+#result{
+    padding-top: 50px;
+}
+.odp{
+background-color: rgba(60, 157, 181, 0.25);
+color:rgba(50, 50, 51, 0.99);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;
+}
+.btn-green{
+background-color: rgba(11, 157, 22, 0.87);
+color:rgba(50, 50, 51, 0.99);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;
+}
+
+.btn-red{
+background-color: rgba(253, 20, 20, 0.92);
+color:rgba(50, 50, 51, 0.99);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;
+
+}
+#poprawna{
+display: none;
+}
+#submit{
+    height: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20px;
+    
+}
+#result h1{
+    padding-bottom: 30px;
+}
+
+.odp:hover{
+background-color: rgba(93, 160, 177, 0.33);
+color:rgba(50, 50, 51, 0.99);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;
+cursor: pointer;
+}
+.disable{
+background-color: rgba(235, 112, 112, 0.47);
+color:rgba(50, 85, 92, 0.65);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;
+text-decoration: line-through;
+
+}
+.btn-green-disabled{
+ background-color: rgba(10, 157, 21, 0.62);
+color:rgba(50, 50, 51, 0.74);
+padding: 20px;
+font-weight: 400;
+font-size:20px;
+border-radius:20px;
+margin-top:10px;   
+}
+
+

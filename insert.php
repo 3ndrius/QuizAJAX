@@ -1,0 +1,3 @@
+<?php
+
+inlude 'connect.php';

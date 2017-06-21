@@ -1,0 +1,31 @@
+.container{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+.pading-top{
+   padding:3%;
+
+}
+.col-md-6{
+    padding:30px 40px;
+    border: 1px solid #31305f;
+}
+.col-sm-12{
+    padding:60px 30px;
+    border: 1px solid black;
+}
+.col-lg-4{
+    padding:50px 40px;
+    border: 1px solid #def8f6;
+
+}
+.fa{
+   color:rgba(77, 186, 219, 0.89);
+}
+#col-4{
+    color:#1c8320;
+
+}
+#icon-4{
+  color:#1c8320;
+}

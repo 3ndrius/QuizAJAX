@@ -1,0 +1,47 @@
+.loader{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(25, 87, 114);
+    z-index: 100;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.spiner{
+  
+     border:3px solid rgba(125, 204, 204, 0.15);
+    border-radius:50%;
+    border-top:3px solid #3991a7;
+    border-bottom:3px solid #278150;
+    width: 120px;
+    height: 120px;
+    animation:round 1.5s linear infinite;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+}
+@keyframes round {
+    0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}   
+    
+}
+.spiner-m{
+     border:5px solid rgba(178, 224, 224, 0.19);
+    border-radius:50%;
+    border-left:5px solid wheat;
+    border-right:5px solid #58a1aa;
+    width: 110px;
+    height: 110px;
+    animation:round 2s linear infinite;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+@keyframes round {
+    0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}   
+    
+}
