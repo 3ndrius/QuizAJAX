@@ -4,7 +4,11 @@ session_start();
 if(isset($_SESSION['email'])) {
 $mail = $_SESSION['email'];
 
-include"connect.php";
+include("connect.php");
+$conn = mysqli_connect($servername, $username, $password, $db_name);
+mysqli_query($conn,"SET NAMES `utf8` COLLATE `utf8_polish_ci`");
+
+
  $output = '';
  $sql = "SELECT * FROM pytania WHERE user_email ='$mail'";
  $sql1 = "secelct count(*) from pytania";

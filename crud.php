@@ -1,6 +1,6 @@
 <?php session_start();
-if(isset($_SESSION['email'])) {
-    
+if(isset($_SESSION['LoggedIN'])) {
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ if(isset($_SESSION['email'])) {
 </head>
 <body>
   <div class="loader">
-      <div class="spiner"></div>  
+      <div class="spiner"></div>
   </div>
 
             <div class="menu-btn" >
@@ -36,38 +36,38 @@ if(isset($_SESSION['email'])) {
                          <li><a href="login.php">LOGOWANIE</a></li>
                          <li><a href="register.php">REJESTRACJA</a></li>
                          <li><a href="quiz.php">KONTAKT</a></li>
-                     </ul> 
-                     </nav>  
+                     </ul>
+                     </nav>
                  </div>
-                 
+
              </div>
-  
+
     <div class="container-fluid" id="margin">
         <div class="row">
             <div class="col-md-12  ">
                 <div class="wrap">
                  <h1>Dodaj pytanie</h1>
                   <div id="show_data">
-                      
-                      
+
+
                   </div>
-             
+
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
-    
- 
- 
+
+
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous">
 
-</script> 
-    <script src="js/add.js"></script>  
+</script>
+    <script src="js/add.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/loader.js"></script>
-    
-     
+
+
 </body>
 </html>
 <?php

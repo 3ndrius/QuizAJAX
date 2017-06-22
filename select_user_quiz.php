@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(isset($_SESSION['email'])){
+if(isset($_SESSION['LoggedIN']) && isset($_POST['limit'])){
 $user = $_SESSION['email'];
 
 include("connect.php");
-
+$conn = mysqli_connect($servername, $username, $password, $db_name);
 $limit = $_POST['limit'];
 //$query = "SELECT * FROM pytania order by rand() LIMIT 1";
 $query = "SELECT * FROM pytania where user_email='$user' order by rand() LIMIT 1";

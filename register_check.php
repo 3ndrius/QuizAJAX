@@ -8,7 +8,7 @@ if(isset($_POST['email'])) {
 //check name
   $name = $_POST['name'];
 
-  if(strlen($name)<3 || strlen($name) >25 ) {
+  if(strlen($name)<2 || strlen($name) >25 ) {
     $check_OK = false;
     $_SESSION['error_name'] = " Nick musi posiadać od 3 do 25 znaków !";
     header("Location:register.php");
