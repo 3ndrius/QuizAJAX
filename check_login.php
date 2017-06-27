@@ -7,7 +7,7 @@ if(isset($_POST['email']) && isset($_POST['password']) && $_POST['email'] != nul
 
 include_once"connect.php";
 
-$conn = new mysqli($servername, $username, $password, $db_name);
+$conn = @new mysqli($servername, $username, $password, $db_name);
 
 if($conn->connect_errno!=0) {
   echo "Error:".$conn->connect_errno. "Opis:". $conn->connect_error;
@@ -39,6 +39,10 @@ else{
           $_SESSION['loginFailed'] = "Niepoprawny login lub hasło !";
           header("Location:login.php");
         }
+      }
+      else{
+          $_SESSION['loginFailed'] = "Niepoprawny login lub hasło !";
+          header("Location:login.php");
       }
     }
     else{

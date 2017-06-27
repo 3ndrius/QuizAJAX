@@ -8,12 +8,12 @@ if(isset($_POST['email'])) {
 //check name
   $name = $_POST['name'];
 
-  if(strlen($name)<2 || strlen($name) >25 ) {
+  if(strlen($name)<3 || strlen($name) >25 ) {
     $check_OK = false;
     $_SESSION['error_name'] = " Nick musi posiadać od 3 do 25 znaków !";
     header("Location:register.php");
   }
-   if( !preg_match('/^[A-Za-z][A-Za-z0-9]{5,31}$/', $name)) {
+   if( !preg_match('/^[A-Za-z][A-Za-z0-9]{3,25}$/', $name)) {
     $check_OK = false;
     $_SESSION['error_name'] = "Pole name może składać sie tylko z liter i cyfr (bez PL znaków) !";
 

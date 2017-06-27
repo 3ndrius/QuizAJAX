@@ -1,7 +1,7 @@
 .loader{
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color:rgb(25, 87, 114);
+    background-color:#aed8c6;
     z-index: 100;
     position: absolute;
     top:0;
@@ -10,8 +10,7 @@
     align-items: center;
 }
 .spiner{
-  
-     border:3px solid rgba(125, 204, 204, 0.15);
+    border:3px solid rgba(125, 204, 204, 0.15);
     border-radius:50%;
     border-top:3px solid #3991a7;
     border-bottom:3px solid #278150;

@@ -1,22 +1,19 @@
 html{
-    height: 100%;
+    
 }
 body{
     font-family: 'Ubuntu', sans-serif;
-/*    background-size: cover;*/
     height: 100%;
-    background-color:rgba(202, 237, 234, 0.13);
+    background-color:#e8f2f8;
     font-size: 18px;
-
-/*
-    background-repeat: no-repeat;
-    background: url(http://www.artsfon.com/pic/201411/1920x1080/artsfon.com-27292.jpg);
-*/
 }
 .wrap{
     margin-top:80px;
-    background-color: rgba(255, 255, 255, 0.9);
-
+   
+}
+.container{
+    height: 100%;
+    box-sizing: border-box
 }
 
 .menu-btn {
@@ -31,11 +28,10 @@ body{
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: wheat;
+    background-color: #715f3d;
     margin: 6px 0;
     transition: 0.6s;
 }
-
 /* Rotate first bar */
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
@@ -52,7 +48,7 @@ body{
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
-.margin-top{
+.padding-top{
     margin-top:5%;
 }
 
@@ -60,10 +56,10 @@ body{
 
 .menu{
     font-family: 'Raleway', sans-serif;
-    background-color: #066464;
+    background-color: #aed8c6;
     font-weight:700;
     font-size:35px;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top:0;
@@ -71,7 +67,7 @@ body{
     z-index:50;
     text-align: center;
     display:none;
-    color:wheat;
+    color:#ffffff;
     cursor: pointer;
 
 }
@@ -96,7 +92,7 @@ body{
 
 }
 #menu-wrap ul>li a{
-    color:wheat;
+    color:#5c6258;
     text-decoration: none;
     padding: 10px;
 

@@ -3,7 +3,7 @@ $(document).ready(function() {
     var questionCount = 0;
 
     $("#submit").click(function() {
-        questionCount++;
+//        questionCount++;
         var  limit = 1;
         $.ajax({
             url:"select.php",
@@ -25,7 +25,7 @@ $(document).ready(function() {
                 $(".change" ).on( "click", function(event) {
                     var odp = event.target.id;
                     var pop = $("#poprawna").html();
-                    console.log(pop+"poprawna");
+//                    console.log(pop+"poprawna");
 
                     if(odp == pop) {
                         $(this).closest("div").addClass("btn-green");
@@ -36,9 +36,9 @@ $(document).ready(function() {
                         $(".change").addClass("disable");
 
 
-                        tablica.push("good");
-
-                        $('#pkt').html(tablica.length);
+//                        tablica.push("good");
+//
+//                        $('#pkt').html(tablica.length);
 
                     }
                     else {
@@ -87,8 +87,8 @@ $(document).ready(function() {
 
             }
          });
-        console.log("pytanie nr:"+questionCount);
-        console.log("id_pytania:"+$("#result").html());
+//        console.log("pytanie nr:"+questionCount);
+//        console.log("id_pytania:"+$("#result").html());
     });
 
 });

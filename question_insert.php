@@ -6,7 +6,6 @@ if(!isset($_SESSION['LoggedIN']) && !isset($_SESSION['email'])) {
 include"connect.php";
 $conn = mysqli_connect($servername, $username, $password, $db_name);
 
-
   $tresc = $_POST['tresc'];
   $odp1 = $_POST['odp1'];
   $odp2 = $_POST['odp2'];

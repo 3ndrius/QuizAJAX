@@ -43,7 +43,7 @@ session_start();
       </div>
     </div>
 
-    <div class="container margin-top">
+    <div class="container padding-top">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 ">
 

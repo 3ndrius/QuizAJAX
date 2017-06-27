@@ -23,7 +23,7 @@ if($result->num_rows>0) {
     while($row = $row = mysqli_fetch_array($result)) {
     ?>
 
-        <?php echo $row['id']; ?>
+      
         <h1><?php  echo $row['tresc']; ?></h1>
         <div class="odp change" id="odp1"><?php  echo $row['odp1'].'</div>'; ?>
         <div class="odp change" id="odp2"><?php  echo $row['odp2'].'</div>'; ?>

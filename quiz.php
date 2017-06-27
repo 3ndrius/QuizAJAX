@@ -45,14 +45,14 @@
    
         <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                  <div id="result">
                      
                  </div>
                  
                 <input type="submit" id="submit" value="LOSUJ" class="btn btn-primary ">
                 <div id="log"></div>
-                <div id="pkt"></div>
+<!--                <div id="pkt"></div>-->
                 <div class="count-table"></div>
             </div>
         </div> 
