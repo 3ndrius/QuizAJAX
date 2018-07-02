@@ -24,11 +24,11 @@
 }
 @keyframes round {
     0%{transform: rotate(0deg);}
-        100%{transform: rotate(360deg);}   
+     100%{transform: rotate(360deg);}   
     
 }
 .spiner-m{
-     border:5px solid rgba(178, 224, 224, 0.19);
+    border:5px solid rgba(178, 224, 224, 0.19);
     border-radius:50%;
     border-left:5px solid wheat;
     border-right:5px solid #58a1aa;
@@ -37,10 +37,8 @@
     animation:round 2s linear infinite;
     margin-right: auto;
     margin-left: auto;
-    
 }
 @keyframes round {
     0%{transform: rotate(0deg);}
-        100%{transform: rotate(360deg);}   
-    
+        100%{transform: rotate(360deg);}     
 }
